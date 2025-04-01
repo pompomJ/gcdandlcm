@@ -1,0 +1,10 @@
+# file1の最大公約数を求める関数をシンプルに書きかえた
+def gcd(a, b):
+  x = max(a, b)
+  y = min(a, b)
+  while x % y != 0:
+    z = x % y
+    x = z
+    y = z
+  else:
+    return y
