@@ -1,0 +1,17 @@
+# 最大公約数を求める関数
+def gcd(a, b):
+  x = max(a, b)
+  y = min(a, b)
+  if x % y == 0:
+    return y
+  else:
+    while x % y != 0:
+      z = x % y
+      x = y
+      y = z
+    else:
+      return z
+
+# 最小公倍数を求める関数
+def lcm(a, b):
+  return int(a * b / gcd(a, b))
